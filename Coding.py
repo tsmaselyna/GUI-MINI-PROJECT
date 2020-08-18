@@ -176,6 +176,7 @@ button1.grid(row=9, column=7)
 
 wd.mainloop()
 
+
 #helmy latest update 3 button with 3windows
 from tkinter import*
 import tkinter.messagebox
@@ -223,3 +224,60 @@ class Window2:
 
 if __name__ == "_main_":
     main()
+
+
+#latest update 18/9/20 at 2.14 P.M.
+#by helmy
+
+from tkinter import*
+import tkinter.messagebox
+from tkinter import ttk
+import random
+import time
+import datetime
+
+def main ():
+    root = Tk()
+    #app = window(root)
+    #application = Rental_Inventory(root)
+    root.mainloop()
+
+    
+    
+#blank windows 1
+class Window1:
+    def __init__ (self,master):
+        self.master.title("CGPA Calculator")
+        self.master.geometry("1350x750+0+0")
+        self.master.config(bg="powder blue")
+        self.frame = Frame(self.master, bg="powder blue")
+        self.frame.pack()
+
+#2 buttons will pop up
+# buttons about us and cgpa calculator
+        self.btn1 = Button(self.frame,text ="About us", width =17, command =self.new_windows)
+        self.btn1.grid(row=3,column=0)
+
+        self.btn2 = Button(self.frame,text ="CGPA Calculator", width =17, command =self.new_windows)
+        self.btn2.grid(row=3,column=0)
+
+      
+    def new_window(self):
+        self.newWindow = Toplevel(self.master)
+        self.app = Window2(self.newWindow)
+
+#this windows will be open if the button click
+class Window2:
+    def __init__ (self,master):
+        self.master.title("CGPA Calculator")
+        self.master.geometry("1350x750+0+0")
+        self.master.config(bg="cadet blue")
+        self.frame = Frame(self.master, bg="powder blue")
+        self.frame.pack()
+
+
+#suspect this is might be the error
+if __name__ == "__main__":
+
+    main()
+

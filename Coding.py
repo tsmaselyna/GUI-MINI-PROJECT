@@ -128,17 +128,17 @@ def Display():
     D5 = tk.Entry(wd).grid(row=4, column=1)
 
     # Label [TOTAL CREDIT]
-    tk.Label(wd, text="Total Credit").grid(row=3, column=3)
+    tk.Label(wd, text="Total Credit :").grid(row=3, column=3)
     tk.Label(wd, text=SumCredit + Credit).grid(row=3, column=4)
     #D6 = tk.Entry(wd).grid(row=3, column=4)
 
     # Label [TOTAL CGPA]
-    tk.Label(wd, text="Total CGPA").grid(row=4, column=3)
+    tk.Label(wd, text="Total CGPA :").grid(row=4, column=3)
     tk.Label(wd, text=SumGrade + Grade).grid(row=4, column=4)
     #D7 = tk.Entry(wd).grid(row=4, column=4)
 
     # Label [RESULT]
-    tk.Label(wd, text="Result").grid(row=5, column=3)
+    tk.Label(wd, text="Result :").grid(row=5, column=3)
     tk.Label(wd, text=(SumGrade/SumCredit)).grid(row=5, column=4)
     #D8 = tk.Entry(wd).grid(row=5, column=4)
 
@@ -175,3 +175,51 @@ button1.grid(row=9, column=7)
 #button2.grid(row=9, column=6)
 
 wd.mainloop()
+
+#helmy latest update 3 button with 3windows
+from tkinter import*
+import tkinter.messagebox
+from tkinter import ttk
+import random
+import time
+import datetime
+
+def main():
+    root = Tk()
+    application=Rental_Inventory(root)
+    root.mainloop()
+
+#blank windows 1
+class Window1:
+    def __init__ (self,master):
+        self.master.title("CGPA Calculator")
+        self.master.geometry("1350x750+0+0")
+        self.master.config(bg="powder blue")
+        self.frame = Frame(self.master, bg="powder blue")
+        self.frame.pack()
+
+#3 buttons 
+        self.btnLogin = Button(self.frame,text ="login", width =17, command =self.new_windows)
+        self.btnlogin.grid(row=3,column=0)
+
+        self.btnReset = Button(self.frame,text ="login", width =17, command =self.new_windows)
+        self.btnReset.grid(row=3,column=0)
+
+        self.btnExit = Button(self.frame,text ="login", width =17, command =self.new_windows)
+        self.btnExit.grid(row=3,column=0)
+
+    def new_window(self):
+        self.newWindow = Toplevel(self.master)
+        self.app = Window2(self.newWindow)
+
+
+class Window2:
+    def __init__ (self,master):
+        self.master.title("CGPA Calculator")
+        self.master.geometry("1350x750+0+0")
+        self.master.config(bg="cadet blue")
+        self.frame = Frame(self.master, bg="powder blue")
+        self.frame.pack()
+
+if __name__ == "_main_":
+    main()

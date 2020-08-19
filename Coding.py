@@ -226,58 +226,61 @@ if __name__ == "_main_":
     main()
 
 
-#latest update 18/9/20 at 2.14 P.M.
+#latest update 19/8/20 at 4.14 P.M.
 #by helmy
 
-from tkinter import*
-import tkinter.messagebox
-from tkinter import ttk
-import random
-import time
-import datetime
+#from tkinter import*
+import tkinter as tk
+import tkinter.messagebox 
+#from tkinter import tk
+
 
 def main ():
-    root = Tk()
-    #app = window(root)
+    root =tk.Tk()
+    app = Window1(root)
     #application = Rental_Inventory(root)
-    root.mainloop()
+    #root.mainloop()
 
     
     
 #blank windows 1
 class Window1:
-    def __init__ (self,master):
-        self.master.title("CGPA Calculator")
+    def __init__ (self, master):
+        self.master = master
+        self.master.title("MINI PROJECT")
         self.master.geometry("1350x750+0+0")
         self.master.config(bg="powder blue")
-        self.frame = Frame(self.master, bg="powder blue")
+        self.frame = tk.Frame(self.master, bg="powder blue")
         self.frame.pack()
 
 #2 buttons will pop up
 # buttons about us and cgpa calculator
-        self.btn1 = Button(self.frame,text ="About us", width =17, command =self.new_windows)
-        self.btn1.grid(row=3,column=0)
 
-        self.btn2 = Button(self.frame,text ="CGPA Calculator", width =17, command =self.new_windows)
-        self.btn2.grid(row=3,column=0)
+        self.lblTitle = tk.Label(self.frame, text= " WELCOME TO CGPA CALCULATOR", font=("arial",50,"bold"), bg="powder blue", fg="black")
+        self.lblTitle.grid(row=0, columnspan=3, pady=40)
 
-      
-    def new_window(self):
-        self.newWindow = Toplevel(self.master)
+
+        self.btncgpa = tk.Button(self.frame,text ="CGPA CALCULATOR", width =17, command =self.new_window2)
+        self.btncgpa.grid(row=2,column=1)
+        
+    def new_window2(self):
+        self.newWindow = tk.Toplevel(self.master)
         self.app = Window2(self.newWindow)
 
 #this windows will be open if the button click
 class Window2:
-    def __init__ (self,master):
-        self.master.title("CGPA Calculator")
+    def __init__ (self, master):
+        self.master = master
+        self.master.title("MINI PROJECT")
         self.master.geometry("1350x750+0+0")
         self.master.config(bg="cadet blue")
-        self.frame = Frame(self.master, bg="powder blue")
+        self.frame = tk.Frame(self.master, bg="powder blue") 
         self.frame.pack()
+
+
 
 
 #suspect this is might be the error
 if __name__ == "__main__":
 
     main()
-

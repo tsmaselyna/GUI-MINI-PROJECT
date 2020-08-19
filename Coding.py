@@ -284,3 +284,40 @@ class Window2:
 if __name__ == "__main__":
 
     main()
+
+
+
+#Calculate Credit Code 19/8/2020 @ 5:01 PM
+from tkinter import *
+ 
+def cal_credit():
+    res=int(r9.get())+int(r10.get())+int(r11.get())+int(r12.get())+int(r13.get())
+    count.set(res)
+ 
+window = Tk()
+count=StringVar();
+Label(window, text="Credit Input 1").grid(row=0, column=0)
+Label(window, text="Credit Input 2").grid(row=1, column=0)
+Label(window, text="Credit Input 3").grid(row=2, column=0)
+Label(window, text="Credit Input 4").grid(row=3, column=0)
+Label(window, text="Credit Input 5").grid(row=4, column=0)
+Label(window, text="Total Credit: ").grid(row=5, column=0)
+result=Label(window, text="", textvariable=count).grid(row=6, column=0)
+ 
+r9 = Entry(window)
+r10 = Entry(window)
+r11 = Entry(window)
+r12 = Entry(window)
+r13 = Entry(window)
+ 
+r9.grid(row=0, column=1)
+r10.grid(row=1, column=1)
+r11.grid(row=2, column=1)
+r12.grid(row=3, column=1)
+r13.grid(row=4, column=1)
+ 
+b = Button(window, text="Calculate", command=cal_credit)
+b.grid(row=0, column=2,columnspan=2, rowspan=2,sticky=W+E+N+S, padx=5, pady=5)
+ 
+ 
+window.mainloop()

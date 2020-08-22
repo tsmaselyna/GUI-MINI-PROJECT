@@ -321,3 +321,614 @@ b.grid(row=0, column=2,columnspan=2, rowspan=2,sticky=W+E+N+S, padx=5, pady=5)
  
  
 window.mainloop()
+
+
+#Latest Update: Full Coding CGPA [Long Coding] @22/8/2020 @17:46
+#But did not show the result
+
+from tkinter import*
+
+#Assign Tk As Window
+window = Tk()
+window.title("MINI PROJECT")
+window.geometry("1200x700")
+
+#Total Credit Label
+count = IntVar()
+Grade = 0
+Invert = count.get()
+
+Label(window, text="Number").grid(row=0, column=0)
+Label(window, text="1").grid(row=1, column=0)
+Label(window, text="2").grid(row=3, column=0)
+Label(window, text="3").grid(row=5, column=0)
+Label(window, text="4").grid(row=7, column=0)
+Label(window, text="5").grid(row=9, column=0)
+Label(window, text="6").grid(row=11, column=0)
+Label(window, text="7").grid(row=13, column=0)
+Label(window, text="8").grid(row=15, column=0)
+
+#Entry Credit
+r0=Entry(window)
+r8=Entry(window)
+r9=Entry(window)
+r10=Entry(window) 
+r11=Entry(window) 
+r12=Entry(window) 
+r13=Entry(window)
+r15=Entry(window)
+
+#Entry Grade
+r1=Entry(window) 
+r2=Entry(window)
+r3=Entry(window) 
+r4=Entry(window) 
+r5=Entry(window) 
+r6=Entry(window) 
+r7=Entry(window)
+r14=Entry(window)
+
+#Entry Subject
+r16 = Entry(window)
+r17 = Entry(window)
+r18 = Entry(window)
+r19 = Entry(window)
+r20 = Entry(window)
+r21 = Entry(window)
+r22 = Entry(window)
+r23 = Entry(window)
+
+#Entry Boarder
+r24 = Entry(window)
+r25 = Entry(window)
+r26 = Entry(window)
+
+#Grade Value
+r27 = Entry(window)
+r28 = Entry(window)
+r29 = Entry(window)
+r30 = Entry(window)
+r31 = Entry(window)
+r32 = Entry(window)
+r33 = Entry(window)
+r34 = Entry(window)
+
+
+def calculate():
+    global Grade
+    
+    #Grade [r1]
+    if r1.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r1.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r1.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r1.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r1.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r1.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r1.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r1.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r1.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r1.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r1.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r1.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+
+    #Grade [r2]
+    if r2.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r2.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r2.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r2.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r2.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r2.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r2.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r2.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r2.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r2.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r2.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r2.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+
+    #Grade [r3]
+    if r3.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r3.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r3.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r3.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r3.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r3.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r3.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r3.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r3.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r3.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r3.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r3.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+
+    #Grade [r4]
+    if r4.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r4.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r4.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r4.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r4.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r4.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r4.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r4.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r4.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r4.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r4.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r4.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+
+    #Grade [r5]
+    if r5.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r5.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r5.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r5.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r5.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r5.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r5.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r5.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r5.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r5.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r5.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r5.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+
+    #Grade [r6]
+    if r6.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r6.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r6.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r6.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r6.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r6.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r6.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r6.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r6.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r6.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r6.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r6.get() == "F": 
+        Tk.Label(window) 
+        Grade += 0.00
+
+    #Grade [r7]
+    if r7.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r7.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r7.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r7.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r7.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r7.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r7.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r7.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r7.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r7.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r7.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r7.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+    
+    #Grade [r14]
+    if r14.get() == "A": 
+        Label(window)
+        Grade += 4.00
+    if r14.get() == "A-": 
+        Label(window)
+        Grade += 3.75
+    if r14.get() == "B+": 
+        Label(window)
+        Grade += 3.50
+    if r14.get() == "B": 
+        Label(window)
+        Grade += 3.00
+    if r14.get() == "B-": 
+        Label(window) 
+        Grade += 2.75
+    if r14.get() == "C+": 
+        Label(window) 
+        Grade += 2.50
+    if r14.get() == "C": 
+        Label(window)
+        Grade += 2.00
+    if r14.get() == "C-": 
+        Label(window)
+        Grade += 1.75
+    if r14.get() == "D+": 
+        Label(window) 
+        Grade += 1.50
+    if r14.get() == "D": 
+        Label(window) 
+        Grade += 1.00
+    if r14.get() == "D-": 
+        Label(window) 
+        Grade += 0.75
+    if r14.get() == "F": 
+        Label(window) 
+        Grade += 0.00
+
+    #Boarder
+    #displayGrade = StringVar()
+    #displayCredit = StringVar()
+    #displayStatus = StringVar()
+
+    #Boarder Entry
+    #Total Credit
+    #r24 = Entry(window, width=10, state=DISABLED, textvariable=displayCredit)
+    #r24.grid(row=17, column=4)
+
+    #Total Grade
+    #r25 = Entry(window,width=10, state=DISABLED, textvariable=displayGrade)
+    #r25.grid(row=18, column=4)
+
+    #Status
+    #r26 = Entry(window,width=10, state=DISABLED, textvariable=displayStatus)
+    #r26.grid(row=19, column=4)
+  
+
+    #Display Grade
+    Label(window, text="Total Grade :").grid(row=18,column=2)
+    Label(window, text=str(Grade)).grid(row=18, column=4)
+
+    #Display Credit
+    Label(window, text="   Total Unit :").grid(row=17, column=2)
+    Label(window, text="", textvariable=count).grid(row=17, column=4)
+    
+    #Convert
+    
+    "This function calculate CGPA by input user"
+    #elif (Grade*counter)/counter >= 2.75 and (Grade*counter)/counter <=3.66: return "Pass"
+    #elif (Grade*counter)/counter >= 2.00 and (Grade*counter)/counter <=2.74: return "Conditional Pass"
+    #else : return "Fail"
+
+    #Display Status
+    Label(window, text="         Status :").grid(row=19, column=2)
+    Label(window, text=(Score)).grid(row=19, column=4)   
+
+    #Total Credit
+    total=int(r0.get())+int(r8.get())+int(r9.get())+int(r10.get())+int(r11.get())+int(r12.get())+int(r13.get())+int(r15.get())
+    count.set(total)
+
+    #Button [EXIT]
+    button2=Button(window, text="Exit", bg="lightgreen", command=exit) 
+    button2.grid(row=21, column=15)
+
+#Entry Credit
+r0 = Entry(window)
+r8 = Entry(window)
+r9 = Entry(window)
+r10 = Entry(window)
+r11 = Entry(window)
+r12 = Entry(window)
+r13 = Entry(window)
+r15 = Entry(window)
+
+#Entry Grade
+r1 = Entry(window)
+r2 = Entry(window)
+r3 = Entry(window)
+r4 = Entry(window)
+r5 = Entry(window)
+r6 = Entry(window)
+r7 = Entry(window)
+r14 = Entry(window)
+
+#Entry Subject
+r16 = Entry(window)
+r17 = Entry(window)
+r18 = Entry(window)
+r19 = Entry(window)
+r20 = Entry(window)
+r21 = Entry(window)
+r22 = Entry(window)
+r23 = Entry(window)
+
+#Grade Value
+r27 = Entry(window)
+r28 = Entry(window)
+r29 = Entry(window)
+r30 = Entry(window)
+r31 = Entry(window)
+r32 = Entry(window)
+r33 = Entry(window)
+r34 = Entry(window)
+
+#Guideline
+Label(window, text="Guideline Grade \n& Grade Value").grid(row=0,column=13)
+Label(window, text="Grade:").grid(row=2,column=11)
+Label(window, text="Grade:").grid(row=3,column=11)
+Label(window, text="Grade:").grid(row=4,column=11)
+Label(window, text="Grade:").grid(row=5,column=11)
+Label(window, text="Grade:").grid(row=6,column=11)
+Label(window, text="Grade:").grid(row=7,column=11)
+Label(window, text="Grade:").grid(row=8,column=11)
+Label(window, text="Grade:").grid(row=9, column=11)
+Label(window, text="Grade:").grid(row=10, column=11)
+Label(window, text="Grade:").grid(row=11, column=11)
+Label(window, text="Grade:").grid(row=12, column=11)
+Label(window, text="Grade:").grid(row=13, column=11)
+
+Label(window, text="A ").grid(row=2,column=12)
+Label(window, text="A-").grid(row=3,column=12)
+Label(window, text="B+").grid(row=4,column=12)
+Label(window, text="B ").grid(row=5,column=12)
+Label(window, text="B-").grid(row=6,column=12)
+Label(window, text="C+").grid(row=7,column=12)
+Label(window, text="C ").grid(row=8,column=12)
+Label(window, text="C-").grid(row=9, column=12)
+Label(window, text="D+").grid(row=10, column=12)
+Label(window, text="D ").grid(row=11, column=12)
+Label(window, text="D-").grid(row=12, column=12)
+Label(window, text="F ").grid(row=13, column=12)
+
+Label(window, text="Grade Value:").grid(row=2,column=14)
+Label(window, text="Grade Value:").grid(row=3,column=14)
+Label(window, text="Grade Value:").grid(row=4,column=14)
+Label(window, text="Grade Value:").grid(row=5,column=14)
+Label(window, text="Grade Value:").grid(row=6,column=14)
+Label(window, text="Grade Value:").grid(row=7,column=14)
+Label(window, text="Grade Value:").grid(row=8,column=14)
+Label(window, text="Grade Value:").grid(row=9, column=14)
+Label(window, text="Grade Value:").grid(row=10, column=14)
+Label(window, text="Grade Value:").grid(row=11, column=14)
+Label(window, text="Grade Value:").grid(row=12, column=14)
+Label(window, text="Grade Value:").grid(row=13, column=14)
+
+Label(window, text="4.00").grid(row=2,column=15)
+Label(window, text="3.75").grid(row=3,column=15)
+Label(window, text="3.50").grid(row=4,column=15)
+Label(window, text="3.00").grid(row=5,column=15)
+Label(window, text="2.75").grid(row=6,column=15)
+Label(window, text="2.50").grid(row=7,column=15)
+Label(window, text="2.00").grid(row=8,column=15)
+Label(window, text="1.75").grid(row=9, column=15)
+Label(window, text="1.50").grid(row=10, column=15)
+Label(window, text="1.00").grid(row=11, column=15)
+Label(window, text="0.75").grid(row=12, column=15)
+Label(window, text="0.00").grid(row=13, column=15)
+
+#Organizing [Grade Value]
+Label(window, text="Grade Value").grid(row=0,column=8)
+r27.grid(row=1, column=8)
+r28.grid(row=3, column=8)
+r29.grid(row=5, column=8)
+r30.grid(row=7, column=8)
+r31.grid(row=9, column=8)
+r32.grid(row=11, column=8)
+r33.grid(row=13, column=8)
+r34.grid(row=15, column=8)
+
+#Organizing [Unit]
+Label(window, text="Unit").grid(row=0,column=6)
+r0.grid(row=1, column=6)
+r8.grid(row=3, column=6)
+r9.grid(row=5, column=6)
+r10.grid(row=7, column=6)
+r11.grid(row=9, column=6)
+r12.grid(row=11, column=6)
+r13.grid(row=13, column=6)
+r15.grid(row=15, column=6)
+
+#Orgainizing [Grade]
+Label(window, text="Grade").grid(row=0,column=4)
+r1.grid(row=1, column=4)
+r2.grid(row=3, column=4)
+r3.grid(row=5, column=4)
+r4.grid(row=7, column=4)
+r5.grid(row=9, column=4)
+r6.grid(row=11, column=4)
+r7.grid(row=13, column=4)
+r14.grid(row=15, column=4)
+
+#Organizing [Subject]
+Label(window, text="Subject").grid(row=0,column=2)
+r16.grid(row=1, column=2)
+r17.grid(row=3, column=2)
+r18.grid(row=5, column=2)
+r19.grid(row=7, column=2)
+r20.grid(row=9, column=2)
+r21.grid(row=11, column=2)
+r22.grid(row=13, column=2)
+r23.grid(row=15, column=2)
+
+#Gap
+Label(window, text="   ").grid(row=2,column=3)
+Label(window, text="   ").grid(row=4,column=3)
+Label(window, text="   ").grid(row=6,column=3)
+Label(window, text="   ").grid(row=8,column=3)
+Label(window, text="   ").grid(row=10,column=3)
+Label(window, text="   ").grid(row=12,column=3)
+Label(window, text="   ").grid(row=14,column=3)
+Label(window, text="   ").grid(row=16, column=3)
+Label(window, text="   ").grid(row=2,column=5)
+Label(window, text="   ").grid(row=4,column=5)
+Label(window, text="   ").grid(row=6,column=5)
+Label(window, text="   ").grid(row=8,column=5)
+Label(window, text="   ").grid(row=10,column=5)
+Label(window, text="   ").grid(row=12,column=5)
+Label(window, text="   ").grid(row=14,column=5)
+Label(window, text="   ").grid(row=16, column=5)
+Label(window, text="   ").grid(row=2,column=7)
+Label(window, text="   ").grid(row=4,column=7)
+Label(window, text="   ").grid(row=6,column=7)
+Label(window, text="   ").grid(row=8,column=7)
+Label(window, text="   ").grid(row=10,column=7)
+Label(window, text="   ").grid(row=12,column=7)
+Label(window, text="   ").grid(row=14,column=7)
+Label(window, text="   ").grid(row=16, column=7)
+Label(window, text="   ").grid(row=2,column=10)
+Label(window, text="   ").grid(row=3,column=10)
+Label(window, text="   ").grid(row=4,column=10)
+Label(window, text="   ").grid(row=5,column=10)
+Label(window, text="   ").grid(row=6,column=10)
+Label(window, text="   ").grid(row=7,column=10)
+Label(window, text="   ").grid(row=8,column=10)
+Label(window, text="   ").grid(row=9,column=10)
+Label(window, text="   ").grid(row=10, column=10)
+Label(window, text="   ").grid(row=11,column=10)
+Label(window, text="   ").grid(row=12,column=10)
+Label(window, text="   ").grid(row=13,column=10)
+
+
+#Button [SUBMIT]
+button1=Button(window, text="Submit", bg="yellow", command=calculate) 
+button1.grid(row=21, column=14)
+
+#button3 = Button(window, text="Calculate", command=addNumbers)
+#button3.grid(row=0, column=2,columnspan=2, rowspan=2,sticky=W+E+N+S, padx=5, pady=5)
+
+window.mainloop()

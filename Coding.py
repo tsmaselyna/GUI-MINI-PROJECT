@@ -932,3 +932,96 @@ button1.grid(row=21, column=14)
 #button3.grid(row=0, column=2,columnspan=2, rowspan=2,sticky=W+E+N+S, padx=5, pady=5)
 
 window.mainloop()
+
+
+#Latest Update: Full Coding CGPA [Short Coding] @22/8/2020 @17:48
+#Still did not get the result/status
+from tkinter import*
+window = Tk()
+
+window.geometry("1200x500")
+
+#Unit
+r0 = Entry (window) 
+r8 = Entry (window) 
+r9 = Entry (window) 
+r10 = Entry (window) 
+r11 = Entry (window) 
+r12 = Entry (window) 
+r13 = Entry (window) 
+r15 = Entry (window) 
+
+#Value Grade
+r27 = Entry (window) 
+r28 = Entry (window) 
+r29 = Entry (window) 
+r30 = Entry (window) 
+r31 = Entry (window) 
+r32 = Entry (window) 
+r33 = Entry (window) 
+r34 = Entry (window)
+
+def answer():  
+    #Value Grade
+    v1 = r27.get()
+    v2 = r28.get()
+    v3 = r29.get()
+    v4 = r30.get()
+    v5 = r31.get()
+    v6 = r32.get()
+    v7 = r33.get()
+    v8 = r34.get()
+
+    #Unit
+    v9 = r0.get()
+    v10 = r8.get()
+    v11 = r9.get()
+    v12 = r10.get()
+    v13 = r11.get()
+    v14 = r12.get()
+    v15 = r13.get()
+    v16 = r15.get()
+
+    Answer = (float(v1)*int(v9)) + (float(v2)*int(v10)) + (float(v3)*int(v11)) + (float(v4)*int(v12)) + (float(v5)*int(v13)) + (float(v6)*int(v14)) + (float(v7)*int(v15)) + (float(v8)*int(v16))
+    Total_Unit = int(v9) + int(v10) + int(v11) + int(v12) + int(v13) + int(v14) + int(v15) + int(v16)
+    Total_Grade = float(v1) + float(v2) + float(v3) + float(v4) + float(v5) + float(v6) + float(v7) + float(v8)
+    Status = Answer / Total_Unit
+
+    Label(window, text="Total Grade:").grid(row=16,column=1)
+    Label(window, text=(Total_Grade)).grid(row=16, column=3)
+
+    Label(window, text="Total Unit:").grid(row=17,column=1)
+    Label(window, text=(Total_Unit)).grid(row=17, column=3)
+
+    Label(window, text="CGPA:").grid(row=18,column=1)
+    Label(window, text=(Status)).grid(row=18, column=3)
+
+    Label(window, text="Status:").grid(row=19,column=1)
+    #Label(window, text=(result)).grid(row=19, column=3)
+
+#Organizing [Grade Value]
+Label(window, text="Grade Value").grid(row=0,column=1)
+r27.grid(row=1, column=1)
+r28.grid(row=3, column=1)
+r29.grid(row=5, column=1)
+r30.grid(row=7, column=1)
+r31.grid(row=9, column=1)
+r32.grid(row=11, column=1)
+r33.grid(row=13, column=1)
+r34.grid(row=15, column=1)
+
+#Organizing [Unit]
+Label(window, text="Unit").grid(row=0,column=3)
+r0.grid(row=1, column=3)
+r8.grid(row=3, column=3)
+r9.grid(row=5, column=3)
+r10.grid(row=7, column=3)
+r11.grid(row=9, column=3)
+r12.grid(row=11, column=3)
+r13.grid(row=13, column=3)
+r15.grid(row=15, column=3)
+
+button1=Button(window, text="Submit", bg="yellow", command=answer) 
+button1.grid(row=21, column=3)
+
+window.mainloop()

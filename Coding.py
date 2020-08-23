@@ -1,5 +1,5 @@
 """
-Nampak luqman & helmy saja yg update. Hamizan buat apa???
+Good luck guys
 """
 
 #Assign Variable

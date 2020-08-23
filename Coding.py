@@ -1332,3 +1332,61 @@ button3=Button(window, text="Exit", bg="#ff1a1a", command=exit)
 button3.grid(row=25, column=16)
 
 window.mainloop()
+
+
+#from tkinter import*
+import tkinter as tk
+import tkinter.messagebox 
+#from tkinter import tk
+#using import tkinter as tk
+
+
+def main ():
+    root =tk.Tk()
+    app = Window1(root)
+    #application = Rental_Inventory(root)
+    #root.mainloop()
+
+    
+    
+#blank windows 1
+class Window1:
+    def __init__ (self, master):
+        self.master = master
+        self.master.title("MINI PROJECT")
+        self.master.geometry("1350x750+0+0")
+        self.master.config(bg="powder blue")
+        self.frame = tk.Frame(self.master, bg="powder blue")
+        self.frame.pack()
+
+#2 buttons will pop up
+# buttons about us and cgpa calculator
+
+        self.lblTitle = tk.Label(self.frame, text= " WELCOME TO CGPA CALCULATOR", font=("arial",50,"bold"), bg="powder blue", fg="black")
+        self.lblTitle.grid(row=0, columnspan=3, pady=40)
+
+
+        self.btncgpa = tk.Button(self.frame,text ="CGPA CALCULATOR", width =17, command =self.new_window2)
+        self.btncgpa.grid(row=2,column=1)
+        
+    def new_window2(self):
+        self.newWindow = tk.Toplevel(self.master)
+        self.app = Window2(self.newWindow)
+
+#this windows will be open if the button click
+class Window2:
+    def __init__ (self, master):
+        self.master = master
+        self.master.title("MINI PROJECT")
+        self.master.geometry("1350x750+0+0")
+        self.master.config(bg="cadet blue")
+        self.frame = tk.Frame(self.master, bg="powder blue") 
+        self.frame.pack()
+
+
+
+
+#suspect this is might be the error
+if __name__ == "__main__":
+
+    main()

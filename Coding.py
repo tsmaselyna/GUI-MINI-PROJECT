@@ -1,3 +1,7 @@
+"""
+Nampak luqman & helmy saja yg update. Hamizan buat apa???
+"""
+
 #Assign Variable
 x = 0
 SumGrade = 0

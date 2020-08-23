@@ -1128,6 +1128,9 @@ def answer():
     Total_Grade = float(v1) + float(v2) + float(v3) + float(v4) + float(v5) + float(v6) + float(v7) + float(v8)
     Status = Answer / Total_Unit
 
+    #Covert Decimal Place
+    con_answer = float("{0:.2f}".format(Status))
+
     #Display Total Grade 
     Label(window, text="Total Grade :").grid(row=19,column=3)
     Label(window, text=(Total_Grade)).grid(row=19, column=5)
@@ -1138,7 +1141,7 @@ def answer():
 
     #Display CGPA
     Label(window, text="          CGPA :").grid(row=21,column=3)
-    Label(window, text=(Status)).grid(row=21, column=5)
+    Label(window, text=(con_answer)).grid(row=21, column=5)
 
     #Display Status Result
     Label(window, text="         Status :").grid(row=22,column=3)
